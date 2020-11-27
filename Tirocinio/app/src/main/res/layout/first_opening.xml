@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootRL"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_reg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/text_welcome_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/green_text"
+            android:textSize="@dimen/sp30"
+            android:text="Benvenuto in KARYA"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/text_welcome_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20"
+            android:text="Siamo felici che tu abbia scelto di scaricare KARYA. Il tuo contributo sarà fondamentale per migliorare il mondo!"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:text="Vuoi avviare un tutorial per conoscere l'applicazione, oppure preferisci scoprirla da solo?"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/prop_rounded_button_green"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/white"
+            android:text="Avvia il tutorial !"
+            android:paddingRight="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:layout_gravity="center"
+            android:onClick="pressStartTutorial"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp15"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_gravity="center"
+            android:textColor="@color/btn_red"
+            android:text="@string/fp_alone"
+            android:onClick="pressHomepageNoLogin"/>
+
+        <TextView
+            android:id="@+id/tv_startKARYA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp15"
+            android:layout_gravity="center"
+            android:textColor="@color/btn_red"
+            android:text="(...)"
+            android:onClick="pressHomepageNoLogin"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

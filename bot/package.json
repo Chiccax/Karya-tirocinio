@@ -1,0 +1,17 @@
+{
+  "name": "bot-karya",
+  "version": "1.0.0",
+  "description": "Bot per segnalazione incendi",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariarosaria Esposito, Francesca Perillo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "node-geocoder": "^3.27.0",
+    "sequelize": "^6.3.5",
+    "telegraf": "^3.38.0"
+  }
+}

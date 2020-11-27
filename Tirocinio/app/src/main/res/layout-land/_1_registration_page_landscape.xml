@@ -1,0 +1,157 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="5"
+    android:background="@drawable/img_background_reg_land"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_activity"
+                android:layout_margin="@dimen/dp20"
+                android:onClick="backActivity"
+                android:layout_alignParentLeft="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_reg_user_small"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_line_w"
+                android:backgroundTint="@color/palette_two"/>
+            <ImageButton
+                android:onClick="pressSecondRegPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_line_w"
+                android:backgroundTint="@color/palette_two_transparent"/>
+            <ImageButton
+                android:onClick="pressThirdRegPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_line_w"
+                android:backgroundTint="@color/palette_two_transparent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:weightSum="2"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dp20">
+
+            <EditText
+                android:id="@+id/reg_name"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/name"
+                android:autofillHints=""
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/reg_email"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/email"
+                android:autofillHints=""
+                android:inputType="text" />
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp20">
+
+            <EditText
+                android:id="@+id/reg_surname"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/surname"
+                android:autofillHints=""
+                android:inputType="text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_continue"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:drawableStart="@drawable/ic_arrow_next"
+        android:drawableLeft="@drawable/ic_arrow_next"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:textColor="@color/white"
+        android:background="@drawable/prop_rounded_button_green"
+        android:onClick="pressContinue"/>
+
+</LinearLayout>

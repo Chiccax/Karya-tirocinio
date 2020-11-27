@@ -1,0 +1,101 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="5"
+    android:background="@color/background"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="@dimen/dp20">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:backgroundTint="@color/palette_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_activity"
+            android:layout_marginLeft="@dimen/dp20"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleziona la posizione dell'incendio:"
+            android:textSize="@dimen/sp25"
+            android:textColor="@color/palette_two"
+            android:textAlignment="gravity"
+            android:layout_marginLeft="@dimen/dp80"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dp20"
+        android:weightSum="2"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:layout_width="329dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/google_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center"
+                android:text="@string/fire_position_description"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:id="@+id/next_fl"
+                android:layout_alignParentBottom="true"
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp70"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/prop_rounded_button_green"
+                android:paddingLeft="@dimen/dp25"
+                android:layout_gravity="center_horizontal"
+                android:drawableStart="@drawable/ic_arrow_next"
+                android:drawableLeft="@drawable/ic_arrow_next"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="blue">#3D4D71</color>
+
+    //pure colors
+    <color name="redFire">#CE2029</color>
+    <color name="black">#000000</color>
+    <color name="grey">#4F000000</color>
+    <color name="white">#FFFFFF</color>
+
+    //transparent colors
+    <color name="transparent">#00FFFFFF</color>
+    <color name="whiteTransparent">#BAFFFFFF</color>
+    <color name="whiteTransparentNum1">#DFFFFFFF</color>
+    <color name="greenTransparent">#4D8BFF8B</color>
+    <color name="redTransparent">#8FFF6961</color>
+    <color name="palette_two_transparent">#80084D6A</color>
+
+    //pastel colors for button
+    <color name="green">#77dd77</color>
+    <color name="yellow">#fdfd77</color>
+    <color name="red">#ff6961</color>
+
+    //dark colors for text of button
+    <color name="green_text">#213C21</color>
+    <color name="yellow_text">#3A3A1A</color>
+    <color name="red_text">#431D1A</color>
+
+    //colors for take photo
+    <color name="gray">#7A7A7A</color>
+    <color name="gray_2">#515151</color>
+
+
+    //color for btn
+    <color name="btn_red">#f44336</color>
+    <color name="btn_green">#7ED957</color>
+
+    <color name="palette_two">#576B95</color>
+
+    <color name="background">#F4F4F4</color>
+
+</resources>

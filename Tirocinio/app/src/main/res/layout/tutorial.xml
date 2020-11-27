@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/iv_container"
+        android:background="@drawable/_1_bg"
+        android:layout_width="250dp"
+        android:layout_height="525dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_above="@id/description"
+        android:layout_below="@id/iv_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:padding="@dimen/dp10"
+        android:text="Per poter utilizzare l\'applicazione bisogna effetuare il login. Nel caso in cui non si dispone delle credenziali di accesso, è necessario effettuare la registrazione. Nel caso in cui non ci si ricorda la password, cliccando su \'\'Recupera la password\'\' quest\'ultima potrà essere modificata."/>
+
+    <LinearLayout
+        android:layout_below="@id/description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp10"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"
+            android:backgroundTint="@color/palette_two"/>
+        <ImageView
+            android:id="@+id/v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"/>
+        <ImageView
+            android:id="@+id/v9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_point"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp20"/>
+
+
+        <Button
+            android:id="@+id/b_continue"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:drawableStart="@drawable/ic_arrow_next_blue"
+            android:drawableLeft="@drawable/ic_arrow_next_blue"
+            android:paddingLeft="@dimen/dp15"
+            android:layout_gravity="bottom"
+            android:background="@drawable/prop_rounded_button"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

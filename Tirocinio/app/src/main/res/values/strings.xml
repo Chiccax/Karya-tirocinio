@@ -1,0 +1,93 @@
+<resources>
+    <string name="map_key" translatable="false">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+
+    <string name="app_name">KARYA reports</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_home_page_with_login">HomePageWithLogin</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Home page user login -->
+    <string name="segnala_incendio"> SEGNALA\nUN\nINCENDIO</string>
+
+    <!-- home page user no login-->
+    <string name="welcome"><br>Benvenuto in KARYA</br>\n\nNegli ultimi anni il numero di incendi è aumentato notevolmente, per questo è fondamentale il tuo aiuto per migliorare la situazione attuale.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="reg">REGISTRATI</string>
+    <string name="opp">Non hai ancora un account?</string>
+    <string name="login">Accedi</string>
+    <string name="forgot_password">Hai dimenticato la password?</string>
+    <string name="recupera_password"><u>Recupera la password</u></string>
+
+    <!-- popup recovery password -->
+    <string name="insert_email"> Inserisci la tua email per ricevere il codice di recupero password </string>
+    <string name="rem_ins_email"> Ricordati di compilare il campo e-mail prima di proseguire. </string>
+    <string name="email_inexistent"> E-mail non esistente.</string>
+    <string name="send_code"> Invia il codice </string>
+    <string name="cancel_operation"> Annulla operazione </string>
+
+    <!-- registration form -->
+    <string name="name">Nome</string>
+    <string name="surname">Cognome</string>
+    <string name="email">E-mail</string>
+    <string name="tel">Numero di telefono</string>
+    <string name="confirm_password">Conferma Password</string>
+    <string name="reg_login">Registrati e accedi</string>
+    <string name="title_activity_registration_page">RegistrationPage</string>
+    <string name="info_email"> Inserisci una email che utilizzi, successivamente ti verrà inviato un codice di verifica per la conferma. </string>
+    <string name="dati">Acconsento il trattamento dei miei dati personali, al fine di veridificare propria identità. </string>
+    <string name="maggiorenne">Dichiaro di aver raggiunto la maggiore età.</string>
+    <string name="send_verification_code">E\' stato inviato un codice di verifica alla email specificata.\nInserire il codice di verifica.</string>
+    <string name="code"> -    -    -    -    -    - </string>
+    <string name="opp_send_code"> Se non hai ricevuto il codice </string>
+    <string name="resend_code"> Invia nuovo codice </string>
+    <string name="password_no_valid"> La password non è valida. Assicurati che contenga:\n -Minimo 8 caratteri \n - Minimo 2 numeri e 2 lettere \n - Minimo 1 carattere speciale </string>
+
+    <!-- more information -->
+    <string name = "more_information"> Ulteriori informazione </string>
+    <string name = "more_information_subtitle">Seleziona le caselle delle opzioni dis eguito elencate di cui sei a conoscenza della loro presenza nei pressi dell\'incendio.</string>
+
+    <!-- fire_location -->
+    <string name="fire_position">Seleziona la posizione dell\'incendio:</string>
+    <string name="fire_position_description">Il marker blu indica la tua posizione attuale, selezionando una zona della mappa comparirà un marker rosso che indicherà l\'incedio da te segnalato</string>
+
+    <!-- take_photo -->
+    <string name="take_picture">Scatta foto</string>
+    <string name="gallery">Galleria</string>
+    <string name="continua">Continua</string>
+    <string name="stayLogged">Ricordati di me</string>
+    <string name="jump"><u>Continua senza inserire la fotografia</u></string>
+    <string name="info_tp">  Seleziona \"Scatta foto\" per aprire la fotocamera e scattare una foto dell\'incendio.
+                            \nSeleziona \"Galleria\" per scegliere una foto dalla galleria del tuo smartphone
+                            \nSeleziona \"Continua\" inviare i dati.</string>
+
+    <!-- user page -->
+    <string name="title_update_profile">Modifica il tuo profilo</string>
+    <string name="subtitle_update_profile">Di seguito sono riportati i campi dei dati che puoi modificare.</string>
+    <string name="second_subtitle_update_profile">ATTENZIONE: Non è necessario modificarli tutti.</string>
+    <string name="button_personal_data">Dati personali</string>
+    <string name="button_access_data">Dati di accesso</string>
+    <string name="change_information">Modifica le informazioni del tuo profilo </string>
+    <string name="change_tel"> Modifica il tuo numero di telefono: </string>
+    <string name="change_pass"> Modifica la tua password: </string>
+    <string name="change_email"> Modifica la tua e-mail: </string>
+    <string name="pass_confirm"> Conferma i cambiamenti inserendo la tua password attuale: </string>
+    <string name="save_change"> Salva le modifiche </string>
+    <string name="logout">Logout</string>
+
+    <!-- data submission completed -->
+    <string name="send_succes">Dati inviati correttamente!</string>
+    <string name="thanks"> Grazie per la tua collaborazione, dei nostri operatori provvederanno al più presto! </string>
+
+    <!-- first page -->
+    <string name="fp_alone"><u>Preferisco conoscere da solo KARYA</u></string>
+
+</resources>

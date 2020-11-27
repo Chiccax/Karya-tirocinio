@@ -1,0 +1,110 @@
+query getAllUsers {
+    getAllUsers{
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+query getUserById($email: String!){
+    getUserById(email: $email){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+query getUserByIdAndPassword($email: String!, $password: String!){
+    getUserByIdAndPassword(email: $email, password: $password){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation createUser($email: String!, $name: String!, $surname: String!, $password: String!, $phone_number: String!, $statements: Boolean!) {
+    createUser(email: $email, name: $name, surname: $surname, password: $password, phone_number: $phone_number, statements: $statements){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation updateUserEmail($userToUpdate: String!, $email: String!) {
+    updateUserEmail(userToUpdate: $userToUpdate, email: $email){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation updateUserName($userToUpdate: String!, $name: String!) {
+    updateUserName(userToUpdate: $userToUpdate, name: $name){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation updateUserSurname($userToUpdate: String!, $surname: String!) {
+    updateUserSurname(userToUpdate: $userToUpdate, surname: $surname){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation updateUserPassword($userToUpdate: String!, $password: String!) {
+    updateUserPassword(userToUpdate: $userToUpdate, password: $password){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation updateUserPhoneNumber($userToUpdate: String!, $phone_number: String!) {
+    updateUserPhoneNumber(userToUpdate: $userToUpdate, phone_number: $phone_number){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+
+mutation deleteUser($userToDelete: String!){
+    deleteUser(userToDelete: $userToDelete){
+        email
+        name
+        surname
+        password
+        phone_number
+        statements
+    }
+}
+

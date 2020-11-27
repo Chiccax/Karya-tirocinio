@@ -1,0 +1,139 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="5"
+    android:background="@color/background"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:backgroundTint="@color/palette_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_activity"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_tp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp80"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp30"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dp20"
+        android:weightSum="2"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_tp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/prop_border_photo"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/b_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_camera"
+                android:drawableLeft="@drawable/ic_camera"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingRight="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:text="@string/take_picture"
+                android:textColor="@color/white"
+                android:background="@drawable/prop_rounded_button"
+                android:onClick="pressCamera"
+                android:backgroundTint="@color/blue"/>
+
+            <Button
+                android:id="@+id/b_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_insert_photo"
+                android:drawableLeft="@drawable/ic_insert_photo"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingRight="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:text="@string/gallery"
+                android:textColor="@color/white"
+                android:background="@drawable/prop_rounded_button"
+                android:onClick="pressCamera"
+                android:backgroundTint="@color/blue"/>
+
+
+            <Button
+                android:id="@+id/b_continue"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@drawable/prop_rounded_button_green"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp40"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:text="@string/continua"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:drawableStart="@drawable/ic_arrow_next"
+                android:drawableLeft="@drawable/ic_arrow_next"
+                android:onClick="pressContinue"/>
+
+            <TextView
+                android:id="@+id/b_jump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/red"
+                android:text="@string/jump"
+                android:layout_marginBottom="@dimen/dp20"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

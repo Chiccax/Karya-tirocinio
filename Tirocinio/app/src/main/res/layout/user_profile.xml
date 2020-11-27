@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootRL"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_reg">
+
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_activity"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:onClick="launchPreviousActivity"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp35">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp25"
+            android:text="@string/title_update_profile"
+            android:textColor="@color/palette_two"
+            android:textSize="@dimen/sp25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/subtitle_update_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp25"
+            android:text="@string/second_subtitle_update_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <Button
+                android:id="@+id/edit_personal_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/prop_rounded_button"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:drawableRight="@drawable/ic_arrow"
+                android:onClick="openPersonalData"
+                android:text="@string/button_personal_data"
+                android:textColor="@color/palette_two" />
+
+            <EditText
+                android:id="@+id/change_name"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/name"
+                android:autofillHints=""
+                android:inputType="text"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/change_surname"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/surname"
+                android:autofillHints=""
+                android:inputType="text"
+                android:visibility="gone"
+                />
+
+
+            <EditText
+                android:id="@+id/change_tel"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_tel"
+                android:drawableLeft="@drawable/ic_tel"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/tel"
+                android:autofillHints=""
+                android:inputType="phone"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                />
+
+            <Button
+                android:id="@+id/edit_access_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/prop_rounded_button"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:drawableRight="@drawable/ic_arrow"
+                android:text="@string/button_access_data"
+                android:textColor="@color/palette_two"
+                android:onClick="openAccessData"/>
+
+            <EditText
+                android:id="@+id/change_email"
+                android:background="@drawable/prop_rounded_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="@dimen/dp15"
+                android:hint="@string/email"
+                android:autofillHints=""
+                android:inputType="text"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_weight="2"
+                    android:autofillHints=""
+                    android:background="@drawable/prop_rounded_text"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/dp15"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    tools:ignore="TextFields"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/showPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_password_visibility_off"
+                    android:background="@drawable/prop_show_password"
+                    android:padding="@dimen/dp10"
+                    android:layout_alignRight="@id/change_password"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/reg_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_weight="2"
+                    android:autofillHints=""
+                    android:background="@drawable/prop_rounded_text"
+                    android:drawableStart="@drawable/ic_key_24"
+                    android:drawableLeft="@drawable/ic_key_24"
+                    android:drawablePadding="@dimen/dp15"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    tools:ignore="TextFields"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/showConfirmPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_password_visibility_off"
+                    android:background="@drawable/prop_show_password"
+                    android:padding="@dimen/dp10"
+                    android:layout_alignRight="@id/reg_confirm_password"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_data"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dp10"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pass_confirm"
+                android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                tools:ignore="TextFields"
+                android:textSize="@dimen/sp20"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pass_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_weight="2"
+                    android:autofillHints=""
+                    android:background="@drawable/prop_rounded_text"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/dp15"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    tools:ignore="TextFields" />
+
+                <ImageView
+                    android:id="@+id/showPasswordConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_password_visibility_off"
+                    android:background="@drawable/prop_show_password"
+                    android:padding="@dimen/dp10"
+                    android:layout_alignRight="@id/pass_confirm" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        >
+
+        <Button
+            android:id="@+id/commit_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/prop_rounded_button"
+            android:text="@string/save_change"
+            android:textColor="#828282"
+            android:textSize="@dimen/sp15"
+            android:enabled="false"
+            />
+
+        <Button
+            android:id="@+id/b_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableStart="@drawable/ic_logout"
+            android:drawableLeft="@drawable/ic_logout"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/logout"
+            android:paddingLeft="@dimen/dp20"
+            android:textColor="@color/white"
+            android:background="@drawable/prop_error"
+            android:backgroundTint="@color/btn_red"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

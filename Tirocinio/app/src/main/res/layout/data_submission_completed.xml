@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootRL"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp25"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_success"
+            android:layout_marginRight="@dimen/dp15"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/send_succes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp25"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="@dimen/dp25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_fireman"
+            />
+
+        <TextView
+            android:id="@+id/textForThanks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="@dimen/dp25"
+            android:layout_margin="@dimen/dp25"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_fl"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:layout_marginBottom="@dimen/dp30"
+        android:background="@drawable/prop_rounded_button"
+        android:backgroundTint="@color/palette_two"
+        android:onClick="pressContinue"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingRight="@dimen/dp30"
+        android:text="Torna alla home page"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+query getFireById($email: String!){
+    getFireByEmail(email: $email){
+        id
+        actual_location
+        fire_location
+        photo
+        industrial_area
+        waste_dump
+        city_center
+        trusses
+        gas_pipeline
+        bell_tower
+        more_info
+        dateAndTime
+        user_email
+    }
+}
+
+query getFireByTimeDateAndLocation($dateAndTime: String!, $fire_location: String!){
+    getFireByTimeDateAndLocation(dateAndTime: $dateAndTime, fire_location: $fire_location){
+        id
+        actual_location
+        fire_location
+        photo
+        industrial_area
+        waste_dump
+        city_center
+        trusses
+        gas_pipeline
+        bell_tower
+        more_info
+        dateAndTime
+        user_email
+    }
+}
+
+mutation createFire($actual_location: String!, $fire_location: String!, $photo: String!, $industrial_area: Boolean!, $waste_dump: Boolean!, $city_center: Boolean!, $trusses: Boolean!, $gas_pipeline: Boolean!, $bell_tower: Boolean!, $more_info: String!, $dateAndTime: String!, $email: String!){
+    createFire(actual_location: $actual_location, fire_location: $fire_location, photo: $photo, industrial_area: $industrial_area, waste_dump: $waste_dump, city_center: $city_center, trusses: $trusses, gas_pipeline: $gas_pipeline, bell_tower: $bell_tower, more_info: $more_info, dateAndTime: $dateAndTime, email: $email){
+        id
+        actual_location
+        fire_location
+        photo
+        industrial_area
+        waste_dump
+        city_center
+        trusses
+        gas_pipeline
+        bell_tower
+        more_info
+        dateAndTime
+        user_email
+    }
+}

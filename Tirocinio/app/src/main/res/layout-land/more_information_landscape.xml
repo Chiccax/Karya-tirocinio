@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootRL"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_reg_land"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ic_arrow_back_activity" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ulteriori informazioni"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp60"
+                android:layout_marginRight="@dimen/dp55"
+                android:layout_marginLeft="@dimen/dp55"
+                android:layout_marginBottom="@dimen/dp20"
+                android:text="Seleziona le caselle delle opzioni di seguito elencate di cui sei a conoscenza della loro presenza nei pressi dell'incendio."
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <CheckBox
+                    android:id="@+id/chk1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Zona industriale"
+                    android:textSize="@dimen/sp15" />
+
+                <CheckBox
+                    android:id="@+id/chk2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Discariche"
+                    android:textSize="@dimen/sp15" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <CheckBox
+                    android:id="@+id/chk4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Tralicci di alta tensione"
+                    android:textSize="@dimen/sp15" />
+
+                <CheckBox
+                    android:id="@+id/chk5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Gasdotto"
+                    android:textSize="@dimen/sp15" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <CheckBox
+                    android:id="@+id/chk3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Centro abitato"
+                    android:textSize="@dimen/sp15" />
+
+                <CheckBox
+                    android:id="@+id/chk6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sp15"
+                    android:buttonTint="@color/blue"
+                    android:checked="false"
+                    android:text="Campanili"
+                    android:textSize="@dimen/sp15" />
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/more_information_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/prop_rounded_text"
+            android:hint=" altro...                       "/>
+
+        <Button
+            android:id="@+id/next_fl"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/prop_rounded_button_green"
+            android:paddingLeft="@dimen/dp25"
+            android:layout_centerHorizontal="true"
+            android:drawableStart="@drawable/ic_arrow_next"
+            android:drawableLeft="@drawable/ic_arrow_next"
+            android:onClick="pressContinue"/>
+    </LinearLayout>
+</RelativeLayout>
