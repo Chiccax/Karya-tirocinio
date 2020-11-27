@@ -5,14 +5,14 @@ Un'app per la segnalazione degli incendi sviluppata da [Mariarosaria Esposito](h
 ---
 
 ## Indice
-- [Obiettivi](#Obiettivi)
+- [Obiettivo](#Obiettivi)
 - [Struttura del progetto](#Struttura-del-progetto)
 - [Prerequisiti](#Prerequisiti)
 - [Come eseguire il progetto](#Come-eseguire-il-progetto)
 
-## Obiettivi <a name="Obiettivi"></a>
+## Obiettivo <a name="Obiettivi"></a>
 
-L'obiettivo di Karya è [...]
+L'obiettivo di Karya è quello di rendere più semplice l’individuazione di incendi unendo tecnologia e società al fine di migliorare le modalità di segnalazione.
 
 ## Struttura del progetto <a name="Struttura-del-progetto"></a>
 
