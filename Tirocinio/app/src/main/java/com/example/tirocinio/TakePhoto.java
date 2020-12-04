@@ -1,6 +1,7 @@
 package com.example.tirocinio;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -10,13 +11,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,14 +38,19 @@ public class TakePhoto extends AppCompatActivity {
             Manifest.permission.CAMERA
     };
 
+    //popup
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private Button btn_send_anyway;
+    private TextView btn_come_back;
 
     public Button btnCamera;
     public ImageButton btnForward;
     public ImageView img;
     public TextView jump;
 
-    public Bitmap taken_photo=null; //foto scattata
-    public String string_photo = ""; //codfica immagine bitmap in stringa
+    public Bitmap taken_photo = null; //foto scattata
+    public String string_photo = " "; //codfica immagine bitmap in stringa
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,20 +67,11 @@ public class TakePhoto extends AppCompatActivity {
 
         btnCamera = (Button) findViewById(R.id.b_camera);
         btnForward = (ImageButton) findViewById(R.id.backButton);
-        jump = (TextView) findViewById(R.id.b_jump);
 
         btnForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchPreviousActivity();
-            }
-        });
-
-        jump.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(), MoreInformation.class);
-                startActivity(intent);
             }
         });
 
@@ -136,10 +132,15 @@ public class TakePhoto extends AppCompatActivity {
     }
 
     public void pressContinue(View v){
-        if(string_photo != null){
+        if(!string_photo.equals(" ")){
             SharedPreferences fire = getSharedPreferences("fire",MODE_PRIVATE);
             SharedPreferences.Editor editor = fire.edit();
 
+            try {
+                string_photo = Utility.compress(string_photo);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             editor.putString("foto", string_photo);
 
             editor.commit();
@@ -147,8 +148,39 @@ public class TakePhoto extends AppCompatActivity {
             Intent intent = new Intent (this, MoreInformation.class);
             startActivity(intent);
         } else {
-            Utility.newCustomToast(getLayoutInflater().inflate(R.layout.custom_toast_error, null), new Toast(getApplicationContext()),
-                    "Non hai ancora inserito la fotografia, se vuoi procedere senza inserire la fotografia, clicca su \"Continua senza inserire la fotografia\"");
+            dialogBuilder = new AlertDialog.Builder(this);
+            int orientation = getResources().getConfiguration().orientation;
+            final View dialogShow;
+            if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                dialogShow = getLayoutInflater().inflate(R.layout.custom_popup_confirm_operation_landscape, null);
+            } else {
+                dialogShow = getLayoutInflater().inflate(R.layout.custom_popup_confirm_operation, null);
+            }
+            btn_come_back = dialogShow.findViewById(R.id.b_come_back);
+            btn_send_anyway = dialogShow.findViewById(R.id.b_continue);
+            dialogBuilder.setView(dialogShow);
+            dialog = dialogBuilder.create();
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            dialog.show();
+
+            btn_send_anyway.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    SharedPreferences fire = getSharedPreferences("fire",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = fire.edit();
+                    editor.putString("foto", string_photo);
+                    editor.commit();
+                    Intent intent = new Intent (getApplicationContext(), MoreInformation.class);
+                    startActivity(intent);
+                }
+            });
+
+            btn_come_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.cancel();
+                }
+            });
         }
     }
 

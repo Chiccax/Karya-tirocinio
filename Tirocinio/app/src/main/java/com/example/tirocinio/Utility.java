@@ -2,12 +2,17 @@ package com.example.tirocinio;
 
 import android.text.method.PasswordTransformationMethod;
 import android.text.method.SingleLineTransformationMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.zip.GZIPOutputStream;
 
 public class Utility{
 
@@ -114,6 +119,18 @@ public class Utility{
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setGravity(Gravity.TOP, 0,0);
         toast.show();
+    }
+
+    public static String compress(final String str) throws IOException {
+        if ((str == null) || (str.length() == 0)) {
+            return null;
+        }
+        ByteArrayOutputStream obj = new ByteArrayOutputStream();
+        GZIPOutputStream gzip = new GZIPOutputStream(obj);
+        gzip.write(str.getBytes("UTF-8"));
+        gzip.flush();
+        gzip.close();
+        return obj.toByteArray().toString();
     }
 
     //spiegazioni delle varie activity:

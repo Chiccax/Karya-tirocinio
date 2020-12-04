@@ -48,7 +48,7 @@ public class DataSubmissionCompleted extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Response<GetFireByTimeDateAndLocationQuery.Data> response) {
                 List<GetFireByTimeDateAndLocationQuery.GetFireByTimeDateAndLocation> fire = response.getData().getFireByTimeDateAndLocation();
-                if(fire.size() == 1){
+                if(fire.size() <= 1){
                     DataSubmissionCompleted.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -61,7 +61,7 @@ public class DataSubmissionCompleted extends AppCompatActivity {
                         @Override
                         public void run() {
                             TextView textForThanks = findViewById(R.id.textForThanks);
-                            textForThanks.setText("Grazie per la tua collaborazione, un altra persona ha segnalato questo incendio. Dei nostri operatori provvederanno al più presto!");
+                            textForThanks.setText("Grazie per la tua collaborazione, un'altra persona ha segnalato questo incendio. Dei nostri operatori provvederanno al più presto!");
                         }
                     });
                 } else {

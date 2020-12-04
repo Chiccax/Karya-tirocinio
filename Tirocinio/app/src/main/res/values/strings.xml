@@ -64,10 +64,12 @@
     <string name="gallery">Galleria</string>
     <string name="continua">Continua</string>
     <string name="stayLogged">Ricordati di me</string>
-    <string name="jump"><u>Continua senza inserire la fotografia</u></string>
     <string name="info_tp">  Seleziona \"Scatta foto\" per aprire la fotocamera e scattare una foto dell\'incendio.
                             \nSeleziona \"Galleria\" per scegliere una foto dalla galleria del tuo smartphone
                             \nSeleziona \"Continua\" inviare i dati.</string>
+    <string name="missing_photo">Non hai inserito ancora nessuna fotografia dell\'incendio.\n\n<b>Sei sicuro di voler inviare i dati senza una foto?</b> </string>
+    <string name="send_anyway">Continua senza la foto</string>
+    <string name="come_back">Torna indietro e scatta la foto</string>
 
     <!-- user page -->
     <string name="title_update_profile">Modifica il tuo profilo</string>

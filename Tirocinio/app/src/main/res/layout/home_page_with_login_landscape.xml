@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootRL"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_bg"
-    >
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
             android:layout_width="@dimen/dp50"
             android:layout_height="@dimen/dp50"
             android:background="@drawable/ic_edit_user"
-            android:layout_margin="@dimen/dp20"
+            android:layout_margin="@dimen/dp10"
             />
 
         <TextView
@@ -38,9 +38,10 @@
         android:id="@+id/reporting"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp50"
         android:text="@string/segnala_incendio"
-        android:textSize="@dimen/dp25"
+        android:textSize="@dimen/dp20"
         android:background="@drawable/prop_segnala_incendio"
         android:textColor="@color/white"
         android:backgroundTint="@color/redFire"

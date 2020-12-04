@@ -6,6 +6,7 @@ const { Telegraf, Markup } = require('telegraf')
 const NodeGeocoder = require('node-geocoder');
 const axios = require('axios');
 const fs = require('fs');
+const zlib = require('zlib');
 
 const options = {
     provider: 'openstreetmap',
@@ -182,7 +183,17 @@ bot.on('photo', async (ctx) => {
                 })
             })
         })
-        session[ctx.message.from.id].photo = photo;
+
+        zlib.gzip(photo, (err, buffer) => { 
+  
+            if (!err) { 
+              session[ctx.message.from.id].photo = buffer.toString('utf-8');
+            }  
+            else { 
+              console.log(err); 
+            } 
+          }); 
+
         session[ctx.message.from.id].Step = 3;
         ctx.reply("Seleziona le opzioni di seguito elencate di cui sei a conoscenza della loro presenza nei pressi dell'incendio: ", getInfoKeyboard(ctx.message.from.id))
     } else {

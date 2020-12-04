@@ -24,7 +24,14 @@ public class HomepageWithLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_page_with_login);
+
+        int orientation = getResources().getConfiguration().orientation;
+
+        if (orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.home_page_with_login_landscape);
+        } else {
+            setContentView(R.layout.home_page_with_login);
+        }
 
         button = (Button) findViewById(R.id.reporting);
         edit = (ImageButton) findViewById(R.id.editProfile);

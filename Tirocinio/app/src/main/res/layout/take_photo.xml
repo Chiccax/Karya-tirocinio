@@ -124,13 +124,4 @@
         android:drawableLeft="@drawable/ic_arrow_next"
         android:onClick="pressContinue"/>
 
-    <TextView
-        android:id="@+id/b_jump"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="@dimen/sp15"
-        android:textColor="@color/red"
-        android:text="@string/jump" />
-
 </LinearLayout>
